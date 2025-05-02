@@ -1,0 +1,16 @@
+{
+  "name": "standup-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && python run.py",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && pip install -r requirements.txt",
+    "install": "npm run install:frontend && npm run install:backend",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+} 
